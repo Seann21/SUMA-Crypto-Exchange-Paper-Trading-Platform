@@ -1,0 +1,73 @@
+<svg width="180" height="180" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark Rounded Container with Amber Glow Border -->
+  <rect width="32" height="32" rx="8" fill="#090d16" />
+  <rect x="0.5" y="0.5" width="31" height="31" rx="7.5" stroke="url(#border-grad)" stroke-opacity="0.5" />
+  
+  <!-- Subtle Amber Radial Glow -->
+  <circle cx="16" cy="16" r="12" fill="url(#glow-rad)" opacity="0.3" />
+
+  <!-- Tiger Shield Crest -->
+  <path
+    d="M16 4.5L7.5 8.5V14.5C7.5 19.5 11 23.8 16 25.5C21 23.8 24.5 19.5 24.5 14.5V8.5L16 4.5Z"
+    stroke="url(#tiger-gold)"
+    stroke-width="1.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="#0e1526"
+  />
+
+  <!-- Tiger Ears / Forehead Crown -->
+  <path
+    d="M10.5 10.5L13.5 12.5M21.5 10.5L18.5 12.5"
+    stroke="#fb923c"
+    stroke-width="1.5"
+    stroke-linecap="round"
+  />
+
+  <!-- Forehead Tiger Stripes -->
+  <path
+    d="M16 7V10.5M13 9.5L14.5 11M19 9.5L17.5 11"
+    stroke="#f59e0b"
+    stroke-width="1.4"
+    stroke-linecap="round"
+  />
+
+  <!-- Fierce Tiger Eyes -->
+  <circle cx="12.5" cy="14.5" r="1.3" fill="#fef08a" />
+  <circle cx="19.5" cy="14.5" r="1.3" fill="#fef08a" />
+  <circle cx="12.5" cy="14.5" r="0.6" fill="#78350f" />
+  <circle cx="19.5" cy="14.5" r="0.6" fill="#78350f" />
+
+  <!-- Nose & Snout -->
+  <path
+    d="M16 16L14.5 18H17.5L16 16Z"
+    fill="#ea580c"
+  />
+
+  <!-- Whiskers & Mouth -->
+  <path
+    d="M16 18V20.5M11.5 18.5H9M20.5 18.5H23M12 21L9.5 22M20 21L22.5 22"
+    stroke="#fb923c"
+    stroke-width="1.3"
+    stroke-linecap="round"
+  />
+
+  <defs>
+    <linearGradient id="tiger-gold" x1="7.5" y1="4.5" x2="24.5" y2="25.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fbbf24" />
+      <stop offset="0.5" stop-color="#f97316" />
+      <stop offset="1" stop-color="#ea580c" />
+    </linearGradient>
+
+    <linearGradient id="border-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f59e0b" />
+      <stop offset="1" stop-color="#ea580c" />
+    </linearGradient>
+
+    <radialGradient id="glow-rad" cx="16" cy="16" r="12" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f59e0b" />
+      <stop offset="1" stop-color="#f59e0b" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+</svg>
+
