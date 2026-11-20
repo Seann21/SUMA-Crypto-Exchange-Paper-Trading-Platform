@@ -190,9 +190,9 @@ cp .env.example .env.local
 
 Buka `.env.local` dan sesuaikan nilainya:
 ```env
-# CoinGecko Demo API Key
-NEXT_PUBLIC_COINGECKO_API_KEY=CG-PVwDaDSrWMyCk7Y9Fn4uh5Mm
-COINGECKO_API_KEY=CG-PVwDaDSrWMyCk7Y9Fn4uh5Mm
+# CoinGecko Demo API Key (Dapatkan gratis di coingecko.com/en/api)
+NEXT_PUBLIC_COINGECKO_API_KEY=your_coingecko_demo_api_key_here
+COINGECKO_API_KEY=your_coingecko_demo_api_key_here
 
 # Supabase Configuration
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co

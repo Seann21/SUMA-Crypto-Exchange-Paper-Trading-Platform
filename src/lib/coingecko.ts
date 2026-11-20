@@ -2,7 +2,7 @@ import { CryptoAsset, CandlestickData } from '@/types/crypto';
 import { DEFAULT_PAIRS } from './constants';
 
 const COINGECKO_BASE_URL = 'https://api.coingecko.com/api/v3';
-const API_KEY = process.env.COINGECKO_API_KEY || process.env.NEXT_PUBLIC_COINGECKO_API_KEY || 'CG-PVwDaDSrWMyCk7Y9Fn4uh5Mm';
+const API_KEY = process.env.COINGECKO_API_KEY || process.env.NEXT_PUBLIC_COINGECKO_API_KEY || '';
 
 // Simple in-memory cache to prevent CoinGecko rate limiting
 let marketsCache: { data: CryptoAsset[]; timestamp: number } | null = null;
@@ -20,11 +20,15 @@ export async function getCryptoMarkets(): Promise<CryptoAsset[]> {
   try {
     const url = `${COINGECKO_BASE_URL}/coins/markets?vs_currency=idr&ids=bitcoin,ethereum,solana&order=market_cap_desc&per_page=10&page=1&sparkline=true&price_change_percentage=24h`;
     
+    const headers: Record<string, string> = {
+      'Accept': 'application/json',
+    };
+    if (API_KEY) {
+      headers['x-cg-demo-api-key'] = API_KEY;
+    }
+
     const response = await fetch(url, {
-      headers: {
-        'Accept': 'application/json',
-        'x-cg-demo-api-key': API_KEY,
-      },
+      headers,
       next: { revalidate: 30 },
     });
 
@@ -71,11 +75,15 @@ export async function getCryptoOHLC(coinId: string = 'bitcoin', days: number = 1
   try {
     const url = `${COINGECKO_BASE_URL}/coins/${coinId}/ohlc?vs_currency=idr&days=${days}`;
     
+    const headers: Record<string, string> = {
+      'Accept': 'application/json',
+    };
+    if (API_KEY) {
+      headers['x-cg-demo-api-key'] = API_KEY;
+    }
+
     const response = await fetch(url, {
-      headers: {
-        'Accept': 'application/json',
-        'x-cg-demo-api-key': API_KEY,
-      },
+      headers,
       next: { revalidate: 60 },
     });
 
